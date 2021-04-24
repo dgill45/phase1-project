@@ -25,6 +25,7 @@ function createDrinkCard(drinkObj){
         img = document.createElement('img'),
         card_body = document.createElement('div'),
         h2 = document.createElement('h2'),
+        hide = document.createElement("div"),
         ul = document.createElement('ul'),
         li1 = document.createElement('li'),
         li2 = document.createElement('li'),
@@ -32,9 +33,15 @@ function createDrinkCard(drinkObj){
         p = document.createElement('p'),
         button = document.createElement('button');
 
+        card.classList.add('card');
+        img.classList.add('card-image-top');
+        h2.classList.add('card-title');
+        hide.classList.add('hidden');
+
         img.src = drinkObj.strDrinkThumb + '/preview';
         card_body;
         h2.textContent = drinkObj.strDrink;
+        hide;
         ul.innerHTML = 'Ingredients';
         li1.textContent = drinkObj.strIngredient1;
         li2.textContent = drinkObj.strIngredient2;
@@ -45,11 +52,12 @@ function createDrinkCard(drinkObj){
         card.appendChild(img)
         card.appendChild(card_body)
         card.appendChild(h2)
-        card.appendChild(ul)
-        card.appendChild(li1)
-        card.appendChild(li2)
-        card.appendChild(li3)
-        card.appendChild(p)
+        card.appendChild(hide)
+        hide.appendChild(ul)
+        hide.appendChild(li1)
+        hide.appendChild(li2)
+        hide.appendChild(li3)
+        hide.appendChild(p)
         card.appendChild(button)
         console.log(card)
         return card;
@@ -60,6 +68,20 @@ getDrinks()
     // console.log(drinksArray);
     loadDrinks(drinksArray);
 });
+
+        /*<div class="card-body">
+              <div class='hidden'>
+                <ul>Ingredients
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <p class="card-text">Instructions. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div>
+                <button type ='button' class ='hidden'>How to Make</button>
+            </div>*/
+
+
     /*const testDrinkCard = {
     strDrink: "GG",
     strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/tqpvqp1472668328.jpg",
