@@ -5,7 +5,7 @@ function getDrinks(){
     return fetch(URL)
     .then (res => res.json())
     /*.then(json => console.log(json));*/
-    // .catch(error => console.log(error)); //
+    .catch(error => console.log(error)); 
 }
 function loadDrinks(drinksArray){
     // console.log(drinksArray);
@@ -37,6 +37,8 @@ function createDrinkCard(drinkObj){
         img.classList.add('card-image-top');
         h2.classList.add('card-title');
         hide.classList.add('hidden');
+        hide.classList.add('secret');
+        button.classList.add('button');
 
         img.src = drinkObj.strDrinkThumb + '/preview';
         card_body;
@@ -69,7 +71,30 @@ getDrinks()
     loadDrinks(drinksArray);
 });
 
-        /*<div class="card-body">
+  
+function showDrink() {
+    //get the div with class hidden//
+    const display = document.querySelector('.secret');
+    const displaySetting = display.style.display;
+    if (displaySetting === "block") {
+    //div with class hidden is visible, hide it//
+      display.style.display = "none";
+      //change button text//
+      drinkBtn.innerHTML = 'How to Make';
+    } else {
+    //div is hidden, show it//
+      display.style.display = "block";
+      //change button text//
+      drinkBtn.innerHTML = 'Hide';
+    }
+  }
+  
+  const drinkBtn = document.querySelector('.button');
+drinkBtn.addEventListener('click', function(){
+    showDrink();
+  })
+  
+  /*<div class="card-body">
               <div class='hidden'>
                 <ul>Ingredients
                   <li></li>

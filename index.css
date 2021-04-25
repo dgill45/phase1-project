@@ -1,6 +1,18 @@
-.card-image-top {
-    max-width: 100px;
-}
+
 section {
     display: flex;
+}
+
+.card {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: block;
+}
+
+.button {
+    background-color: #4CAF50;
 }

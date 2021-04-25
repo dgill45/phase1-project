@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href = "index.css">
+    <link rel ="stylesheet"  defer href = "index.css">
     <script defer src = 'index.js'></script>
     <title>Drink Recipe App - phase 1 project</title>
 </head>
 <body>
   <h1>Drink Recipe App</h1>
   
-    <section id= "card-box" class = 'col-lg-4 mb-4'>
-          <!--<div class="card" style="width: 18rem;">
-            <img class="card-img-top" src='https://www.thecocktaildb.com/images/media/drink/tqpvqp1472668328.jpg' alt="Margarita">
-              <h5 class="card-title"></h5>Margarita
+    <section id= "card-box" class = 'col-lg-4 md-4'>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src='' alt="">
+              <h2 class="card-title"></h2>Margarita
             <div class="card-body">
-              <ul>Ingredients
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <p class="card-text">Instructions. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button type ='button' class ='hidden'>How to Make</button>
+              <div class ='secret' class='hidden'>
+                <ul>Ingredients
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <p class="card-text">Instructions. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div>
+                <button onclick="showDrink()" type ='button' >How to Make</button>
             </div>
-          </div>-->
+          </div>
     </section>
     <h4>Which Cocktail Do You Wish to Make?</h4>
       <form id='drinkapp-form'>
