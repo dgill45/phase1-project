@@ -1,0 +1,44 @@
+section {
+    display: flex;
+}
+
+.card {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    
+}
+.button {
+    background-color: #4CAF50;
+}
+
+body{
+background-color: rgb(6, 6, 63);
+}
+
+h1{
+    color: oldlace;
+    text-align: center;
+}
+h4{
+    color: oldlace;
+    text-align: center;
+}
+
+.center{
+    display: block;
+    text-align: center;
+}
+
+h2{
+    color: oldlace;
+}
+ul{
+    color: oldlace;
+}
+li{
+    color: oldlace;
+}
+p{
+    color: oldlace;
+}
