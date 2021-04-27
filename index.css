@@ -41,4 +41,5 @@ li{
 }
 p{
     color: oldlace;
+    overflow-wrap: break-word;
 }
