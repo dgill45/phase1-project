@@ -64,11 +64,21 @@ function createDrinkCard(drinkObj){
         img.src = drinkObj.strDrinkThumb + '/preview';
         h2.textContent = drinkObj.strDrink;
         ul.innerHTML = 'Ingredients/Instructions';
-        li1.textContent = drinkObj.strIngredient1;
-        li2.textContent = drinkObj.strIngredient2;
-        li3.textContent = drinkObj.strIngredient3;
+
+        for (let i = 1; i <= 15; i++){
+            if (drinkObj['strIngredient${i}']) {
+                let li = document.createElement('li');
+                li.textContent = drinkObj['strIngredient${i}'];
+                ul.appendChild(li);
+            }
+        }
+        
         p.textContent = drinkObj.strInstructions;
         button.innerHTML = "How to Make";
+
+        button.addEventListener('click', function() {
+            hide.classList.toggle('hidden');
+        });
 
         card.appendChild(img)
         card.appendChild(card_body)

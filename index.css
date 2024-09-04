@@ -1,10 +1,11 @@
 section {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0 10px;
     border-radius: 20px;
     
 }
@@ -14,19 +15,18 @@ section {
 
 body{
 background-color: rgb(6, 6, 63);
+font-family: 'Lato', sans-serif;
 }
 
-h1{
-    color: oldlace;
-    text-align: center;
-}
-h4{
+h1, h4 {
     color: oldlace;
     text-align: center;
 }
 
 .center{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -42,4 +42,8 @@ li{
 p{
     color: oldlace;
     overflow-wrap: break-word;
+}
+
+.hidden {
+    display: none;
 }
